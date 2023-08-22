@@ -17,3 +17,11 @@
 export default function capitalize(input) {
   return input.replace(/(^|\s)\S/g, a => a.toUpperCase());
 }
+
+export default function capitalizeB(input) {
+  return str
+    .split(' ')
+    .map((e) => e[0].toUpperCase() + e.slice(1))
+    .join(' ');
+}
+
