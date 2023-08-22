@@ -14,6 +14,20 @@
  * @return {string}
  * node homework/rle.js
  */
+const rle = (input) => {
+  let result = '';
+  const arr = str.split('');
+  const uniqueArr = arr.filter((item, i, ar) => ar.indexOf(item) == i);
+  for ( let j = 0; j < uniqueArr.length; j++) {
+  const uniqueLength = arr.filter((item) => item === uniqueArr[j]
+  ).length;
+  const count = uniqueLength !== 1 ? uniqueLength : "";
+  result += `${uniqueArr[j]}${count}`
+  }
+  return result;
+};
+
+
 export default function rle(input) {
   let result = '';
 
